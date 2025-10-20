@@ -29,7 +29,7 @@ static const char *TAG = "MAIN";
 extern void conductor_send_song_events(void);
 
 // Button and LED state
-static uint8_t selected_song = 1; // Default to first song
+static uint8_t selected_index = 0; // ✅ ใช้อิง index ใน all_songs[] (0..TOTAL_SONGS-1)
 static led_pattern_t current_led_pattern = LED_SLOW_BLINK;
 static uint32_t led_last_update = 0;
 static bool led_state = false;
@@ -63,15 +63,21 @@ void app_main(void) {
     }
     
     // Display available songs
-    ESP_LOGI(TAG, "🎼 Available songs:");
-    for (int i = 0; i < TOTAL_SONGS; i++) {
-        ESP_LOGI(TAG, "   %d. %s (%d parts, %d BPM)", 
-                 all_songs[i].song_id, 
+    ESP_LOGI(TAG, "🎼 Available songs (TOTAL_SONGS=%d):", (int)TOTAL_SONGS);
+    for (int i = 0; i < (int)TOTAL_SONGS; i++) {
+        ESP_LOGI(TAG, "   [%d] %s (id=%d, parts=%d, %d BPM)", 
+                 i, 
                  all_songs[i].song_name,
+                 all_songs[i].song_id,
                  all_songs[i].part_count,
                  all_songs[i].tempo_bpm);
     }
-    ESP_LOGI(TAG, "📝 Press BOOT button to cycle songs, hold to play!");
+    if (TOTAL_SONGS == 0) {
+        ESP_LOGW(TAG, "⚠️  No songs registered in all_songs[].");
+    } else {
+        ESP_LOGI(TAG, "➡️  Default selected: [%d] %s", selected_index, all_songs[selected_index].song_name);
+    }
+    ESP_LOGI(TAG, "📝 Short press BOOT: cycle songs | Long press: Play/Stop");
     
     // Create tasks
     xTaskCreate(button_task, "button_task", 2048, NULL, 5, &button_task_handle);
@@ -117,7 +123,7 @@ static void button_task(void *pvParameters) {
         // Button press detection (active LOW)
         if (last_button_state == true && current_button_state == false) {
             button_press_start = current_time;
-            ESP_LOGI(TAG, "🔘 Button pressed");
+            ESP_LOGD(TAG, "🔘 Button pressed");
         }
         
         // Button release detection
@@ -133,39 +139,42 @@ static void button_task(void *pvParameters) {
 
 static void handle_button_press(uint32_t press_duration) {
     if (press_duration < 1000) {
-        // Short press: Cycle through songs
-        // Note: We need to access conductor_state somehow
-        // For now, let's assume we're not playing
-        selected_song++;
-        if (selected_song > TOTAL_SONGS) {
-            selected_song = 1;
+        // Short press: Cycle through songs by INDEX (ไม่อิง song_id)
+        if (TOTAL_SONGS == 0) {
+            ESP_LOGW(TAG, "⚠️  No songs to select.");
+            return;
         }
+        selected_index = (uint8_t)((selected_index + 1) % TOTAL_SONGS);
+
+        const orchestra_song_t* song = &all_songs[selected_index];
+        ESP_LOGI(TAG, "🎵 Selected: [%d] %s (id=%d)", selected_index, song->song_name, song->song_id);
         
-        const orchestra_song_t* song = get_song_by_id(selected_song);
-        if (song) {
-            ESP_LOGI(TAG, "🎵 Selected: %s", song->song_name);
-            
-            // Quick LED flash to indicate selection
-            gpio_set_level(STATUS_LED, 1);
-            vTaskDelay(pdMS_TO_TICKS(100));
-            gpio_set_level(STATUS_LED, 0);
-        }
+        // Quick LED flash to indicate selection
+        gpio_set_level(STATUS_LED, 1);
+        vTaskDelay(pdMS_TO_TICKS(100));
+        gpio_set_level(STATUS_LED, 0);
+
     } else {
         // Long press: Start/Stop song
+        if (TOTAL_SONGS == 0) {
+            ESP_LOGW(TAG, "⚠️  No songs registered; cannot play.");
+            return;
+        }
+        const orchestra_song_t* song = &all_songs[selected_index];
+
         if (is_conductor_playing()) {
             // Stop current song
             if (stop_song()) {
-                ESP_LOGI(TAG, "⏹️  Song stopped");
+                ESP_LOGI(TAG, "⏹️  Stopped: %s", song->song_name);
                 current_led_pattern = LED_SLOW_BLINK;
             } else {
                 ESP_LOGE(TAG, "❌ Failed to stop song");
                 current_led_pattern = LED_FAST_BLINK;
             }
         } else {
-            // Start selected song
-            if (start_song(selected_song)) {
-                const orchestra_song_t* song = get_song_by_id(selected_song);
-                ESP_LOGI(TAG, "▶️  Playing: %s", song ? song->song_name : "Unknown");
+            // Start selected song (ส่งเป็น song_id ของ element นั้น)
+            if (start_song(song->song_id)) {
+                ESP_LOGI(TAG, "▶️  Playing: [%d] %s (id=%d)", selected_index, song->song_name, song->song_id);
                 current_led_pattern = LED_ON;
             } else {
                 ESP_LOGE(TAG, "❌ Failed to start song");
@@ -183,11 +192,9 @@ static void led_task(void *pvParameters) {
             case LED_OFF:
                 gpio_set_level(STATUS_LED, 0);
                 break;
-                
             case LED_ON:
                 gpio_set_level(STATUS_LED, 1);
                 break;
-                
             case LED_SLOW_BLINK: // 1 Hz
                 if (current_time - led_last_update > 500) {
                     led_state = !led_state;
@@ -195,7 +202,6 @@ static void led_task(void *pvParameters) {
                     led_last_update = current_time;
                 }
                 break;
-                
             case LED_FAST_BLINK: // 5 Hz
                 if (current_time - led_last_update > 100) {
                     led_state = !led_state;
@@ -203,25 +209,21 @@ static void led_task(void *pvParameters) {
                     led_last_update = current_time;
                 }
                 break;
-                
-            case LED_HEARTBEAT: // Double pulse
-                {
-                    static uint8_t heartbeat_phase = 0;
-                    static uint32_t heartbeat_timer = 0;
-                    
-                    if (current_time - heartbeat_timer > 100) {
-                        switch (heartbeat_phase) {
-                            case 0: case 2: gpio_set_level(STATUS_LED, 1); break;
-                            case 1: case 3: gpio_set_level(STATUS_LED, 0); break;
-                            default: heartbeat_phase = 0; break;
-                        }
-                        heartbeat_phase = (heartbeat_phase + 1) % 20; // 2 seconds cycle
-                        heartbeat_timer = current_time;
+            case LED_HEARTBEAT: { // Double pulse
+                static uint8_t heartbeat_phase = 0;
+                static uint32_t heartbeat_timer = 0;
+                if (current_time - heartbeat_timer > 100) {
+                    switch (heartbeat_phase) {
+                        case 0: case 2: gpio_set_level(STATUS_LED, 1); break;
+                        case 1: case 3: gpio_set_level(STATUS_LED, 0); break;
+                        default: heartbeat_phase = 0; break;
                     }
+                    heartbeat_phase = (heartbeat_phase + 1) % 20; // 2 seconds cycle
+                    heartbeat_timer = current_time;
                 }
                 break;
+            }
         }
-        
         vTaskDelay(pdMS_TO_TICKS(10)); // Update every 10ms
     }
 }

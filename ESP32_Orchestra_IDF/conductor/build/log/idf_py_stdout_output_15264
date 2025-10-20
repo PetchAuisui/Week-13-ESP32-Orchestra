@@ -1,0 +1,972 @@
+Command: C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Petch\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\esp32_orchestra_conductor.elf C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Petch\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a330h (107312) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a358 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e28c vaddr=40080000 size=01d8ch (  7564) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84714h (542484) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b473c vaddr=40081d8c size=16018h ( 90136) load[0m
+[0;32mI (357) esp_image: segment 5: paddr=000ca75c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (369) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (369) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (397) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (402) app_init: ELF file SHA256:  f61c67c0b...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (414) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (418) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8070 len 00027F90 (159 KiB): DRAM[0m
+[0;32mI (439) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (456) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa8, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (674) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (727) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (728) wifi:enable tsf[0m
+[0;32mI (731) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (732) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (733) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (736) MAIN: ✅ Conductor ready![0m
+[0;32mI (740) MAIN: 🎼 Available songs (TOTAL_SONGS=4):[0m
+[0;32mI (744) MAIN:    [0] Twinkle Twinkle Little Star (id=1, parts=4, 120 BPM)[0m
+[0;32mI (751) MAIN:    [1] Happy Birthday (id=2, parts=3, 100 BPM)[0m
+[0;32mI (756) MAIN:    [2] Mary Had a Little Lamb (id=4, parts=2, 140 BPM)[0m
+[0;32mI (762) MAIN:    [3] เต่า (Taotao) (id=5, parts=3, 100 BPM)[0m
+[0;32mI (768) MAIN: ➡️  Default selected: [0] Twinkle Twinkle Little Star[0m
+[0;32mI (774) MAIN: 📝 Short press BOOT: cycle songs | Long press: Play/Stop[0m
+[0;32mI (781) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (786) main_task: Returned from app_main()[0m
+[0;32mI (5581) MAIN: 🎵 Selected: [1] Happy Birthday (id=2)[0m
+[0;32mI (7181) MAIN: 🎵 Selected: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (7931) MAIN: 🎵 Selected: [3] เต่า (Taotao) (id=5)[0m
+[0;32mI (10461) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10461) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10461) CONDUCTOR:   Playing: No[0m
+[0;32mI (10461) CONDUCTOR:   Selected Song: 0[0m
+[0;32mI (11281) CONDUCTOR: Starting song: เต่า (Taotao)[0m
+[0;32mI (11281) CONDUCTOR: Parts: 3, Tempo: 100 BPM[0m
+[0;32mI (11281) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (11283) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (11284) MAIN: ▶️  Playing: [3] เต่า (Taotao) (id=5)[0m
+[0;32mI (11296) CONDUCTOR: Part 1: Note 55 (196.0 Hz) for 400 ms[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d7969  PS      : 0x00060430  A0      : 0x800d7be2  A1      : 0x3ffc9fd0  
+A2      : 0x00000001  A3      : 0x00000001  A4      : 0x3f40ed70  A5      : 0x3f40ed94  
+A6      : 0x01900037  A7      : 0x00000002  A8      : 0x01900037  A9      : 0x00000003  
+A10     : 0x000001e0  A11     : 0x00000050  A12     : 0x00000001  A13     : 0x00002c20  
+A14     : 0x3f403ee8  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x01900037  LBEG    : 0x400029ac  LEND    : 0x400029cb  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400d7966:0x3ffc9fd0 0x400d7bdf:0x3ffca030 0x400d6fd3:0x3ffca050 0x400896e5:0x3ffca070
+
+
+
+
+ELF file SHA256: f61c67c0b
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a330h (107312) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a358 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e28c vaddr=40080000 size=01d8ch (  7564) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84714h (542484) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b473c vaddr=40081d8c size=16018h ( 90136) load[0m
+[0;32mI (357) esp_image: segment 5: paddr=000ca75c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (369) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (397) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (402) app_init: ELF file SHA256:  f61c67c0b...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (414) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (418) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8070 len 00027F90 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (456) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa8, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (674) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (691) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (692) wifi:enable tsf[0m
+[0;32mI (695) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (696) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (696) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (700) MAIN: ✅ Conductor ready![0m
+[0;32mI (703) MAIN: 🎼 Available songs (TOTAL_SONGS=4):[0m
+[0;32mI (708) MAIN:    [0] Twinkle Twinkle Little Star (id=1, parts=4, 120 BPM)[0m
+[0;32mI (714) MAIN:    [1] Happy Birthday (id=2, parts=3, 100 BPM)[0m
+[0;32mI (720) MAIN:    [2] Mary Had a Little Lamb (id=4, parts=2, 140 BPM)[0m
+[0;32mI (726) MAIN:    [3] เต่า (Taotao) (id=5, parts=3, 100 BPM)[0m
+[0;32mI (732) MAIN: ➡️  Default selected: [0] Twinkle Twinkle Little Star[0m
+[0;32mI (738) MAIN: 📝 Short press BOOT: cycle songs | Long press: Play/Stop[0m
+[0;32mI (745) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (750) main_task: Returned from app_main()[0m
+[0;32mI (7244) CONDUCTOR: Starting song: Twinkle Twinkle Little Star[0m
+[0;32mI (7244) CONDUCTOR: Parts: 4, Tempo: 120 BPM[0m
+[0;32mI (7245) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (7246) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (7248) MAIN: ▶️  Playing: [0] Twinkle Twinkle Little Star (id=1)[0m
+[0;32mI (7259) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (7264) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (7270) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (7754) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (7756) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (7846) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (8247) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (8248) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (8250) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (8452) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (8753) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (8754) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (9045) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+����������������������������������������������������������������(9246) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms
+[0;32mI (9247) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (9249) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (9751) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (9753) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (9854) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (10245) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (10247) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (10248) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (10450) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (10461) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10461) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10461) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (10461) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (10463) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (10469) CONDUCTOR:   Elapsed Time: 3 seconds[0m
+[0;32mI (11053) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (11254) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (11256) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (11257) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (11649) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (11750) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (11752) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (12253) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (12255) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (12256) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (12448) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (12749) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (12750) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (13051) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (13252) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (13254) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (13255) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (13647) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (13748) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (13750) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (14251) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (14253) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (14254) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (14257) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (15051) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (15252) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (15254) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (15255) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (15647) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (15748) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (15750) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (16251) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (16253) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (16254) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (16257) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (16751) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (16753) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (16854) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (17245) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (17247) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (17248) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (17650) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (17751) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (17752) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (18253) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (18254) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (18256) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (18259) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (18853) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (19254) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (19256) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (19257) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (19449) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (19450) CONDUCTOR: Part 3 finished[0m
+[0;32mI (19750) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (19752) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (20253) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (20255) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (20256) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (20468) CONDUCTOR: Conductor Status:[0m
+[0;32mI (20468) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (20468) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (20468) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (20470) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (20476) CONDUCTOR:   Elapsed Time: 13 seconds[0m
+[0;32mI (20750) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (20751) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (21253) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (21254) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (21256) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (21748) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (21750) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (22251) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (22253) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (22254) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (23246) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (23248) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (23249) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (23751) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (23753) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (24254) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (24256) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (24257) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (24749) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (24751) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (25252) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (25253) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (25255) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (25747) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (25748) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (26249) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (26251) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (26252) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (27254) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (27255) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (27256) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (27749) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (27751) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (28251) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (28253) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (28254) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+���������������������������������������������������������������� (28746) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms
+[0;32mI (28748) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (29248) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (29249) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (29251) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (29753) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (29755) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (30246) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (30247) CONDUCTOR: Part 0 finished[0m
+[0;32mI (30248) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (30249) CONDUCTOR: Part 1 finished[0m
+[0;32mI (30253) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (30258) CONDUCTOR: Part 2 finished[0m
+[0;32mI (30261) CONDUCTOR: Song finished![0m
+[0;32mI (30265) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (30469) CONDUCTOR: Conductor Status:[0m
+[0;32mI (30469) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (30469) CONDUCTOR:   Playing: No[0m
+[0;32mI (30469) CONDUCTOR:   Selected Song: 1[0m
+����������������������������������������������������������������(37909) CONDUCTOR: Starting song: Twinkle Twinkle Little Star
+[0;32mI (37909) CONDUCTOR: Parts: 4, Tempo: 120 BPM[0m
+[0;32mI (37910) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (37911) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (37913) MAIN: ▶️  Playing: [0] Twinkle Twinkle Little Star (id=1)[0m
+[0;32mI (37925) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (37930) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (37935) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (38410) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (38412) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (38513) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (38914) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (38916) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (38917) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (39119) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (39410) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (39412) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (39713) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (39914) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (39915) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (39917) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (40419) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (40420) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (40471) CONDUCTOR: Conductor Status:[0m
+[0;32mI (40471) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (40471) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (40471) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (40473) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (40479) CONDUCTOR:   Elapsed Time: 2 seconds[0m
+[0;32mI (40513) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (40914) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (40915) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (40917) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (41119) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (41710) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (41911) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (41913) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (41914) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (42316) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (42417) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (42419) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (42910) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (42912) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (42913) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (43115) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (43416) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (43417) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (43718) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (43919) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (43921) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (43922) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (44314) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (44415) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (44417) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (44918) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (44920) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (44921) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (44924) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (45718) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (45919) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (45921) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (45922) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (46314) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (46415) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (46417) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (46918) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (46920) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (46921) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (46924) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (47418) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (47420) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (47510) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (47911) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (47912) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (47914) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (48316) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (48417) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (48419) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (48910) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (48912) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (48913) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (48916) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (49510) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (49911) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (49913) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (49914) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (50116) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (50117) CONDUCTOR: Part 3 finished[0m
+[0;32mI (50417) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (50419) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (50480) CONDUCTOR: Conductor Status:[0m
+[0;32mI (50480) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (50480) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (50480) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (50482) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (50488) CONDUCTOR:   Elapsed Time: 12 seconds[0m
+[0;32mI (50912) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (50913) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (50915) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (51417) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (51418) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (51919) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (51921) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (51922) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (52416) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (52417) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (52918) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (52920) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (52921) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (53913) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (53915) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (53916) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (54418) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (54419) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (54910) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (54912) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (54913) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (55415) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (55416) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (55917) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (55918) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (55920) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (56412) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (56413) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (56914) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (56916) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (56917) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (57919) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (57921) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (57922) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (58414) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (58415) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (58915) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (58916) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (58917) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (59410) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (59411) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (59912) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (59914) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (59915) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (60417) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (60419) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (60490) CONDUCTOR: Conductor Status:[0m
+[0;32mI (60490) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (60490) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (60490) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (60492) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (60498) CONDUCTOR:   Elapsed Time: 22 seconds[0m
+[0;32mI (60912) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (60913) CONDUCTOR: Part 0 finished[0m
+[0;32mI (60914) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (60915) CONDUCTOR: Part 1 finished[0m
+[0;32mI (60919) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (60924) CONDUCTOR: Part 2 finished[0m
+[0;32mI (60927) CONDUCTOR: Song finished![0m
+[0;32mI (60931) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (64924) MAIN: 🎵 Selected: [1] Happy Birthday (id=2)[0m
+[0;32mI (65624) MAIN: 🎵 Selected: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (66174) MAIN: 🎵 Selected: [3] เต่า (Taotao) (id=5)[0m
+[0;32mI (70495) CONDUCTOR: Conductor Status:[0m
+[0;32mI (70495) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (70495) CONDUCTOR:   Playing: No[0m
+[0;32mI (70495) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (70774) CONDUCTOR: Starting song: เต่า (Taotao)[0m
+[0;32mI (70774) CONDUCTOR: Parts: 3, Tempo: 100 BPM[0m
+[0;32mI (70774) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (70777) MAIN: ▶️  Playing: [3] เต่า (Taotao) (id=5)[0m
+[0;32mI (70777) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (70789) CONDUCTOR: Part 1: Note 55 (196.0 Hz) for 400 ms[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d7969  PS      : 0x00060930  A0      : 0x800d7be2  A1      : 0x3ffc9ed0  
+A2      : 0x00000002  A3      : 0x00000001  A4      : 0x3f40ed70  A5      : 0x3f40ed94  
+A6      : 0x01900037  A7      : 0x00000002  A8      : 0x01900037  A9      : 0x00000003  
+A10     : 0x000001e0  A11     : 0x00000050  A12     : 0x00000001  A13     : 0x00011485  
+A14     : 0x3f403ee8  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x01900037  LBEG    : 0x400029ac  LEND    : 0x400029cb  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400d7966:0x3ffc9ed0 0x400d7bdf:0x3ffc9f30 0x400d6fd3:0x3ffc9f50 0x400896e5:0x3ffc9f70
+
+
+
+
+ELF file SHA256: f61c67c0b
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a330h (107312) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a358 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e28c vaddr=40080000 size=01d8ch (  7564) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84714h (542484) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b473c vaddr=40081d8c size=16018h ( 90136) load[0m
+[0;32mI (357) esp_image: segment 5: paddr=000ca75c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (369) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (397) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (402) app_init: ELF file SHA256:  f61c67c0b...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (414) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (418) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8070 len 00027F90 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (456) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa8, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (673) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (715) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (716) wifi:enable tsf[0m
+[0;32mI (719) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (721) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (721) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (725) MAIN: ✅ Conductor ready![0m
+[0;32mI (728) MAIN: 🎼 Available songs (TOTAL_SONGS=4):[0m
+[0;32mI (732) MAIN:    [0] Twinkle Twinkle Little Star (id=1, parts=4, 120 BPM)[0m
+[0;32mI (739) MAIN:    [1] Happy Birthday (id=2, parts=3, 100 BPM)[0m
+[0;32mI (744) MAIN:    [2] Mary Had a Little Lamb (id=4, parts=2, 140 BPM)[0m
+[0;32mI (750) MAIN:    [3] เต่า (Taotao) (id=5, parts=3, 100 BPM)[0m
+[0;32mI (756) MAIN: ➡️  Default selected: [0] Twinkle Twinkle Little Star[0m
+[0;32mI (763) MAIN: 📝 Short press BOOT: cycle songs | Long press: Play/Stop[0m
+[0;32mI (769) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (774) main_task: Returned from app_main()[0m
+[0;32mI (10459) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10459) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10459) CONDUCTOR:   Playing: No[0m
+[0;32mI (10459) CONDUCTOR:   Selected Song: 0[0m
+[0;32mI (11319) CONDUCTOR: Starting song: Twinkle Twinkle Little Star[0m
+[0;32mI (11319) CONDUCTOR: Parts: 4, Tempo: 120 BPM[0m
+[0;32mI (11319) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (11322) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (11323) MAIN: ▶️  Playing: [0] Twinkle Twinkle Little Star (id=1)[0m
+[0;32mI (11335) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (11340) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (11345) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (11820) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (11821) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (11922) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (12323) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (12324) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (12326) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (12528) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (12829) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (12831) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (13122) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (13323) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (13324) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (13325) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (13828) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (13830) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (13921) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (14322) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (14324) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (14325) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (14527) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (15128) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (15329) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (15330) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (15332) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (15724) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (15825) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (15827) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (16328) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (16329) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (16330) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (16523) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (16824) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (16825) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (17126) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (17327) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (17329) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (17330) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (17722) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (17823) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (17825) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (18325) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (18327) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (18328) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (18331) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (19125) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (19326) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (19328) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (19329) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (19721) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (19822) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (19824) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (20325) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (20326) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (20327) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (20331) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (20465) CONDUCTOR: Conductor Status:[0m
+[0;32mI (20465) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (20465) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (20465) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (20467) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (20473) CONDUCTOR:   Elapsed Time: 9 seconds[0m
+[0;32mI (20827) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (20828) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (20920) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (21321) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (21322) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (21324) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (21726) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (21827) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (21828) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (22329) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (22331) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (22332) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (22335) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (22929) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (23320) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (23322) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (23323) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (23525) CONDUCTOR: Part 3: Note 55 (196.0 Hz) for 200 ms[0m
+[0;32mI (23526) CONDUCTOR: Part 3 finished[0m
+[0;32mI (23826) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (23827) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (24328) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (24329) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (24330) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (24823) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (24825) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (25326) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (25327) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (25329) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (25821) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (25822) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (26323) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (26324) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (26326) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (27328) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (27330) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (27331) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (27823) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (27825) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (28326) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (28328) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (28329) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (28821) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (28823) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (29323) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (29324) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (29325) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (29828) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (29830) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (30321) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (30322) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (30324) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (30466) CONDUCTOR: Conductor Status:[0m
+[0;32mI (30466) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (30466) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (30466) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (30468) CONDUCTOR:   Current Song: Twinkle Twinkle Little Star[0m
+[0;32mI (30474) CONDUCTOR:   Elapsed Time: 19 seconds[0m
+[0;32mI (31328) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (31329) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (31331) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (31823) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (31825) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (32326) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (32327) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (32329) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (32821) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (32823) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (33324) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (33325) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (33327) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (33829) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (33830) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (34321) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (34322) CONDUCTOR: Part 0 finished[0m
+[0;32mI (34322) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (34324) CONDUCTOR: Part 1 finished[0m
+[0;32mI (34328) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (34333) CONDUCTOR: Part 2 finished[0m
+[0;32mI (34336) CONDUCTOR: Song finished![0m
+[0;32mI (34340) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (38734) MAIN: 🎵 Selected: [1] Happy Birthday (id=2)[0m
+[0;32mI (39784) MAIN: 🎵 Selected: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (40334) MAIN: 🎵 Selected: [3] เต่า (Taotao) (id=5)[0m
+[0;32mI (40474) CONDUCTOR: Conductor Status:[0m
+[0;32mI (40474) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (40474) CONDUCTOR:   Playing: No[0m
+[0;32mI (40474) CONDUCTOR:   Selected Song: 1[0m
+[0;32mI (45884) CONDUCTOR: Starting song: เต่า (Taotao)[0m
+[0;32mI (45884) CONDUCTOR: Parts: 3, Tempo: 100 BPM[0m
+[0;32mI (45885) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (45886) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (45887) MAIN: ▶️  Playing: [3] เต่า (Taotao) (id=5)[0m
+[0;32mI (45899) CONDUCTOR: Part 1: Note 55 (196.0 Hz) for 400 ms[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d7969  PS      : 0x00060f30  A0      : 0x800d7be2  A1      : 0x3ffc9fd0  
+A2      : 0x00000001  A3      : 0x00000001  A4      : 0x3f40ed70  A5      : 0x3f40ed94  
+A6      : 0x01900037  A7      : 0x00000002  A8      : 0x01900037  A9      : 0x00000003  
+A10     : 0x000001e0  A11     : 0x00000050  A12     : 0x00000001  A13     : 0x0000b34b  
+A14     : 0x3f403ee8  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x01900037  LBEG    : 0x400029ac  LEND    : 0x400029cb  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x400d7966:0x3ffc9fd0 0x400d7bdf:0x3ffca030 0x400d6fd3:0x3ffca050 0x400896e5:0x3ffca070
+
+
+
+
+ELF file SHA256: f61c67c0b
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a330h (107312) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a358 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e28c vaddr=40080000 size=01d8ch (  7564) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84714h (542484) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b473c vaddr=40081d8c size=16018h ( 90136) load[0m
+[0;32mI (357) esp_image: segment 5: paddr=000ca75c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (369) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (397) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (402) app_init: ELF file SHA256:  f61c67c0b...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (414) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (418) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8070 len 00027F90 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (456) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa8, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (522) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (677) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (678) wifi:enable tsf[0m
+[0;32mI (681) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (682) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (683) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (686) MAIN: ✅ Conductor ready![0m
+[0;32mI (689) MAIN: 🎼 Available songs (TOTAL_SONGS=4):[0m
+[0;32mI (694) MAIN:    [0] Twinkle Twinkle Little Star (id=1, parts=4, 120 BPM)[0m
+[0;32mI (701) MAIN:    [1] Happy Birthday (id=2, parts=3, 100 BPM)[0m
+[0;32mI (706) MAIN:    [2] Mary Had a Little Lamb (id=4, parts=2, 140 BPM)[0m
+[0;32mI (712) MAIN:    [3] เต่า (Taotao) (id=5, parts=3, 100 BPM)[0m
+[0;32mI (718) MAIN: ➡️  Default selected: [0] Twinkle Twinkle Little Star[0m
+[0;32mI (724) MAIN: 📝 Short press BOOT: cycle songs | Long press: Play/Stop[0m
+[0;32mI (731) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (736) main_task: Returned from app_main()[0m
+[0;32mI (10461) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10461) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10461) CONDUCTOR:   Playing: No[0m
+[0;32mI (10461) CONDUCTOR:   Selected Song: 0[0m
+[0;32mI (20464) CONDUCTOR: Conductor Status:[0m
+[0;32mI (20464) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (20464) CONDUCTOR:   Playing: No[0m
+[0;32mI (20464) CONDUCTOR:   Selected Song: 0[0m
+[0;32mI (30466) CONDUCTOR: Conductor Status:[0m
+[0;32mI (30466) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (30466) CONDUCTOR:   Playing: No[0m
+[0;32mI (30466) CONDUCTOR:   Selected Song: 0[0m
+����������������������������������������������������������������(40468) CONDUCTOR: Conductor Status:
+[0;32mI (40468) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (40468) CONDUCTOR:   Playing: No[0m
+[0;32mI (40468) CONDUCTOR:   Selected Song: 0[0m
+[0;32mI (50470) CONDUCTOR: Conductor Status:[0m
+[0;32mI (50470) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (50470) CONDUCTOR:   Playing: No[0m
+[0;32mI (50470) CONDUCTOR:   Selected Song: 0[0m

@@ -1,0 +1,19 @@
+Command: ninja all
+[1/10] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\bootloader\esp-idf\esptool_py && C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/Petch/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Petch/OneDrive/Documents/VScode/Week-13-ESP32-Orchestra/ESP32_Orchestra_IDF/conductor/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6680 bytes. 0x980 bytes (8%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/espnow_conductor.c.obj
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/conductor_main.c.obj
+[6/10] Linking C static library esp-idf\main\libmain.a
+[7/10] Generating esp-idf/esp_system/ld/sections.ld
+[8/10] Linking CXX executable esp32_orchestra_conductor.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/Petch/OneDrive/Documents/VScode/Week-13-ESP32-Orchestra/ESP32_Orchestra_IDF/conductor/build/esp32_orchestra_conductor.bin
+[10/10] C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\esp-idf\esptool_py && C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Users/Petch/esp/v5.5.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Petch/OneDrive/Documents/VScode/Week-13-ESP32-Orchestra/ESP32_Orchestra_IDF/conductor/build/partition_table/partition-table.bin C:/Users/Petch/OneDrive/Documents/VScode/Week-13-ESP32-Orchestra/ESP32_Orchestra_IDF/conductor/build/esp32_orchestra_conductor.bin"
+esp32_orchestra_conductor.bin binary size 0xba7a0 bytes. Smallest app partition is 0x100000 bytes. 0x45860 bytes (27%) free.

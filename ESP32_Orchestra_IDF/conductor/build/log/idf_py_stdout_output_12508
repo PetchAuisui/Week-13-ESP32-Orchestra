@@ -1,0 +1,801 @@
+Command: C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Petch\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\esp32_orchestra_conductor.elf C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Petch\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b4758 vaddr=400820ec size=15cb8h ( 89272) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000ca418 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (387) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (396) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (401) app_init: ELF file SHA256:  15634721c...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (413) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (417) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8068 len 00027F98 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (443) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (455) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa0, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (674) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (728) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (729) wifi:enable tsf[0m
+[0;32mI (732) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (734) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (734) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (737) MAIN: ✅ Conductor ready![0m
+[0;32mI (741) MAIN: 🎼 Available songs:[0m
+[0;32mI (744) MAIN:    1. Twinkle Twinkle Little Star (4 parts, 120 BPM)[0m
+[0;32mI (750) MAIN:    2. Happy Birthday (3 parts, 100 BPM)[0m
+[0;32mI (754) MAIN:    4. Mary Had a Little Lamb (2 parts, 140 BPM)[0m
+[0;32mI (760) MAIN: 📝 Press BOOT button to cycle songs, hold to play![0m
+[0;32mI (766) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (771) main_task: Returned from app_main()[0m
+[0;32mI (4166) MAIN: 🔘 Button pressed[0m
+[0;32mI (4466) MAIN: 🎵 Selected: Happy Birthday[0m
+[0;32mI (5616) MAIN: 🔘 Button pressed[0m
+[0;32mI (7466) MAIN: 🔘 Button pressed[0m
+[0;32mI (7616) MAIN: 🎵 Selected: Twinkle Twinkle Little Star[0m
+[0;32mI (10456) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10456) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10456) CONDUCTOR:   Playing: No[0m
+[0;32mI (10456) CONDUCTOR:   Selected Song: 0[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b4758 vaddr=400820ec size=15cb8h ( 89272) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000ca418 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (387) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (396) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (401) app_init: ELF file SHA256:  15634721c...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (413) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (417) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8068 len 00027F98 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (443) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (455) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa0, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (674) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (692) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (693) wifi:enable tsf[0m
+[0;32mI (696) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (697) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (698) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (701) MAIN: ✅ Conductor ready![0m
+[0;32mI (704) MAIN: 🎼 Available songs:[0m
+[0;32mI (707) MAIN:    1. Twinkle Twinkle Little Star (4 parts, 120 BPM)[0m
+[0;32mI (713) MAIN:    2. Happy Birthday (3 parts, 100 BPM)[0m
+[0;32mI (718) MAIN:    4. Mary Had a Little Lamb (2 parts, 140 BPM)[0m
+[0;32mI (723) MAIN: 📝 Press BOOT button to cycle songs, hold to play![0m
+[0;32mI (730) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (735) main_task: Returned from app_main()[0m
+[0;32mI (5779) MAIN: 🔘 Button pressed[0m
+[0;32mI (6029) MAIN: 🎵 Selected: Happy Birthday[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b4758 vaddr=400820ec size=15cb8h ( 89272) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000ca418 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (387) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (396) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (401) app_init: ELF file SHA256:  15634721c...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (413) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (417) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8068 len 00027F98 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (443) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (455) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa0, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (675) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b4758 vaddr=400820ec size=15cb8h ( 89272) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000ca418 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (387) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (396) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (401) app_init: ELF file SHA256:  15634721c...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (413) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (417) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8068 len 00027F98 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (443) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (455) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa0, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (674) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (691) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (692) wifi:enable tsf[0m
+[0;32mI (695) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (696) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (697) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (700) MAIN: ✅ Conductor ready![0m
+[0;32mI (703) MAIN: 🎼 Available songs:[0m
+[0;32mI (706) MAIN:    1. Twinkle Twinkle Little Star (4 parts, 120 BPM)[0m
+[0;32mI (712) MAIN:    2. Happy Birthday (3 parts, 100 BPM)[0m
+[0;32mI (717) MAIN:    4. Mary Had a Little Lamb (2 parts, 140 BPM)[0m
+[0;32mI (722) MAIN: 📝 Press BOOT button to cycle songs, hold to play![0m
+[0;32mI (729) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (734) main_task: Returned from app_main()[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b4758 vaddr=400820ec size=15cb8h ( 89272) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000ca418 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (387) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (396) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (401) app_init: ELF file SHA256:  15634721c...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (413) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (417) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8068 len 00027F98 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (443) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (455) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (513) wifi:wifi driver task: 3ffc0fa0, prio:23, stack:6656, core=0[0m
+[0;32mI (520) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (520) wifi:wifi certification version: v7.0[0m
+[0;32mI (521) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (527) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (532) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (536) wifi:Init management short buffer num: 32[0m
+[0;32mI (540) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (544) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (548) wifi:Init static rx buffer num: 10[0m
+[0;32mI (552) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (557) wifi_init: rx ba win: 6[0m
+[0;32mI (559) wifi_init: accept mbox: 6[0m
+[0;32mI (562) wifi_init: tcpip mbox: 32[0m
+[0;32mI (565) wifi_init: udp mbox: 6[0m
+[0;32mI (567) wifi_init: tcp mbox: 6[0m
+[0;32mI (570) wifi_init: tcp tx win: 5760[0m
+[0;32mI (573) wifi_init: tcp rx win: 5760[0m
+[0;32mI (577) wifi_init: tcp mss: 1440[0m
+[0;32mI (580) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (583) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (588) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (673) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (692) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (693) wifi:enable tsf[0m
+[0;32mI (696) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (697) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (698) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (701) MAIN: ✅ Conductor ready![0m
+[0;32mI (704) MAIN: 🎼 Available songs:[0m
+[0;32mI (707) MAIN:    1. Twinkle Twinkle Little Star (4 parts, 120 BPM)[0m
+[0;32mI (713) MAIN:    2. Happy Birthday (3 parts, 100 BPM)[0m
+[0;32mI (718) MAIN:    4. Mary Had a Little Lamb (2 parts, 140 BPM)[0m
+[0;32mI (724) MAIN: 📝 Press BOOT button to cycle songs, hold to play![0m
+[0;32mI (730) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (735) main_task: Returned from app_main()[0m
+[0;32mI (2380) MAIN: 🔘 Button pressed[0m
+[0;32mI (2630) MAIN: 🎵 Selected: Happy Birthday[0m
+[0;32mI (4230) MAIN: 🔘 Button pressed[0m
+[0;32mI (7230) CONDUCTOR: Starting song: Happy Birthday[0m
+[0;32mI (7230) CONDUCTOR: Parts: 3, Tempo: 100 BPM[0m
+[0;32mI (7231) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (7232) MAIN: ▶️  Playing: Happy Birthday[0m
+[0;32mI (7640) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 200 ms[0m
+[0;32mI (7642) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 200 ms[0m
+[0;32mI (7643) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 600 ms[0m
+[0;32mI (7936) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (7938) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (8438) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (8439) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 800 ms[0m
+[0;32mI (8441) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (9333) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (9335) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 800 ms[0m
+[0;32mI (9336) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (10238) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (10240) CONDUCTOR: Part 1: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (10242) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (10464) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10464) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10464) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (10465) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (10467) CONDUCTOR:   Current Song: Happy Birthday[0m
+[0;32mI (10472) CONDUCTOR:   Elapsed Time: 3 seconds[0m
+[0;32mI (11136) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 1200 ms[0m
+[0;32mI (11138) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 1200 ms[0m
+[0;32mI (11139) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 1200 ms[0m
+[0;32mI (12532) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 200 ms[0m
+[0;32mI (12534) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 200 ms[0m
+[0;32mI (12535) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 600 ms[0m
+[0;32mI (12837) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (12838) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (13338) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (13340) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 800 ms[0m
+[0;32mI (13341) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (14233) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (14235) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 800 ms[0m
+[0;32mI (14236) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (15138) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (15139) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (15140) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (16033) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 1200 ms[0m
+[0;32mI (16035) CONDUCTOR: Part 1: Note 62 (293.7 Hz) for 1200 ms[0m
+[0;32mI (16036) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 1200 ms[0m
+[0;32mI (17439) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 200 ms[0m
+[0;32mI (17441) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 200 ms[0m
+[0;32mI (17442) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 600 ms[0m
+[0;32mI (17734) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (17736) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (18237) CONDUCTOR: Part 0: Note 72 (523.3 Hz) for 800 ms[0m
+[0;32mI (18239) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 800 ms[0m
+[0;32mI (18240) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (19132) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 800 ms[0m
+[0;32mI (19134) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (19135) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (20037) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (20039) CONDUCTOR: Part 1: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (20040) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (20472) CONDUCTOR: Conductor Status:[0m
+[0;32mI (20472) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (20472) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (20472) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (20474) CONDUCTOR:   Current Song: Happy Birthday[0m
+[0;32mI (20479) CONDUCTOR:   Elapsed Time: 13 seconds[0m
+[0;32mI (20933) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (20935) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (20936) CONDUCTOR: Part 2: Note 59 (246.9 Hz) for 800 ms[0m
+[0;32mI (21839) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 1200 ms[0m
+[0;32mI (21840) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 1200 ms[0m
+[0;32mI (21841) CONDUCTOR: Part 2: Note 57 (220.0 Hz) for 800 ms[0m
+[0;32mI (22735) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 1200 ms[0m
+[0;32mI (23236) CONDUCTOR: Part 0: Note 71 (493.9 Hz) for 200 ms[0m
+[0;32mI (23237) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 200 ms[0m
+[0;32mI (23538) CONDUCTOR: Part 0: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (23540) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (24031) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 800 ms[0m
+[0;32mI (24032) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (24133) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 600 ms[0m
+[0;32mI (24934) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 800 ms[0m
+[0;32mI (24936) CONDUCTOR: Part 1: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (24937) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (25839) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (25840) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (25842) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (26734) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 1200 ms[0m
+[0;32mI (26735) CONDUCTOR: Part 0 finished[0m
+[0;32mI (26736) CONDUCTOR: Part 1: Note 62 (293.7 Hz) for 1200 ms[0m
+[0;32mI (26738) CONDUCTOR: Part 1 finished[0m
+[0;32mI (26741) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (27636) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (28537) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 1200 ms[0m
+[0;32mI (28538) CONDUCTOR: Part 2 finished[0m
+[0;32mI (28538) CONDUCTOR: Song finished![0m
+[0;32mI (28539) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (30474) CONDUCTOR: Conductor Status:[0m
+[0;32mI (30474) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (30474) CONDUCTOR:   Playing: No[0m
+[0;32mI (30474) CONDUCTOR:   Selected Song: 2[0m
+���������������������������������������������������������������� (40476) CONDUCTOR: Conductor Status:
+[0;32mI (40476) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (40476) CONDUCTOR:   Playing: No[0m
+[0;32mI (40476) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (50478) CONDUCTOR: Conductor Status:[0m
+[0;32mI (50478) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (50478) CONDUCTOR:   Playing: No[0m
+[0;32mI (50478) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (60480) CONDUCTOR: Conductor Status:[0m
+[0;32mI (60480) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (60480) CONDUCTOR:   Playing: No[0m
+[0;32mI (60480) CONDUCTOR:   Selected Song: 2[0m
+���������������������������������������������������������������� (70482) CONDUCTOR: Conductor Status:
+[0;32mI (70482) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (70482) CONDUCTOR:   Playing: No[0m
+[0;32mI (70482) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (80484) CONDUCTOR: Conductor Status:[0m
+[0;32mI (80484) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (80484) CONDUCTOR:   Playing: No[0m
+[0;32mI (80484) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (90486) CONDUCTOR: Conductor Status:[0m
+[0;32mI (90486) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (90486) CONDUCTOR:   Playing: No[0m
+[0;32mI (90486) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (100488) CONDUCTOR: Conductor Status:[0m
+[0;32mI (100488) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (100488) CONDUCTOR:   Playing: No[0m
+[0;32mI (100488) CONDUCTOR:   Selected Song: 2[0m
+����������������������������������������������������������������(110491) CONDUCTOR: Conductor Status:
+[0;32mI (110491) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (110491) CONDUCTOR:   Playing: No[0m
+[0;32mI (110491) CONDUCTOR:   Selected Song: 2[0m
+����������������������������������������������������������������(120494) CONDUCTOR: Conductor Status:
+[0;32mI (120494) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (120494) CONDUCTOR:   Playing: No[0m
+[0;32mI (120494) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (130497) CONDUCTOR: Conductor Status:[0m
+[0;32mI (130497) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (130497) CONDUCTOR:   Playing: No[0m
+[0;32mI (130497) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (140500) CONDUCTOR: Conductor Status:[0m
+[0;32mI (140500) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (140500) CONDUCTOR:   Playing: No[0m
+[0;32mI (140500) CONDUCTOR:   Selected Song: 2[0m
+���������������������������������������������������������������� (150503) CONDUCTOR: Conductor Status:
+[0;32mI (150503) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (150503) CONDUCTOR:   Playing: No[0m
+[0;32mI (150503) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (160506) CONDUCTOR: Conductor Status:[0m
+[0;32mI (160506) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (160506) CONDUCTOR:   Playing: No[0m
+[0;32mI (160506) CONDUCTOR:   Selected Song: 2[0m
+����������������������������������������������������������������170509) CONDUCTOR: Conductor Status:
+[0;32mI (170509) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (170509) CONDUCTOR:   Playing: No[0m
+[0;32mI (170509) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (180512) CONDUCTOR: Conductor Status:[0m
+[0;32mI (180512) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (180512) CONDUCTOR:   Playing: No[0m
+[0;32mI (180512) CONDUCTOR:   Selected Song: 2[0m
+����������������������������������������������������������������90515) CONDUCTOR: Conductor Status:
+[0;32mI (190515) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (190515) CONDUCTOR:   Playing: No[0m
+[0;32mI (190515) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (200518) CONDUCTOR: Conductor Status:[0m
+[0;32mI (200518) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (200518) CONDUCTOR:   Playing: No[0m
+[0;32mI (200518) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (210521) CONDUCTOR: Conductor Status:[0m
+[0;32mI (210521) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (210521) CONDUCTOR:   Playing: No[0m
+[0;32mI (210521) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (220524) CONDUCTOR: Conductor Status:[0m
+[0;32mI (220524) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (220524) CONDUCTOR:   Playing: No[0m
+[0;32mI (220524) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (230527) CONDUCTOR: Conductor Status:[0m
+[0;32mI (230527) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (230527) CONDUCTOR:   Playing: No[0m
+[0;32mI (230527) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (240530) CONDUCTOR: Conductor Status:[0m
+[0;32mI (240530) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (240530) CONDUCTOR:   Playing: No[0m
+[0;32mI (240530) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (250533) CONDUCTOR: Conductor Status:[0m
+[0;32mI (250533) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (250533) CONDUCTOR:   Playing: No[0m
+[0;32mI (250533) CONDUCTOR:   Selected Song: 2[0m
+[0;32mI (260536) CONDUCTOR: Conductor Status:[0m
+[0;32mI (260536) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (260536) CONDUCTOR:   Playing: No[0m
+[0;32mI (260536) CONDUCTOR:   Selected Song: 2[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fd0h (106448) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029ff8 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002df2c vaddr=40080000 size=020ech (  8428) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84730h (542512) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b4758 vaddr=400820ec size=15cb8h ( 89272) load[0m
+[0;32mI (356) esp_image: segment 5: paddr=000ca418 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (387) cpu_start: Pro cpu start user code[0m
+[0;32mI (387) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (387) app_init: Application information:[0m
+[0;32mI (387) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (396) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (401) app_init: ELF file SHA256:  15634721c...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (413) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (417) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8068 len 00027F98 (159 KiB): DRAM[0m
+[0;32mI (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (443) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (449) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (455) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (467) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (487) main_task: Started on CPU0[0m
+[0;32mI (490) main_task: Calling app_main()[0m
+[0;32mI (492) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (498) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (515) wifi:wifi driver task: 3ffc0fa0, prio:23, stack:6656, core=0[0m
+[0;32mI (522) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (522) wifi:wifi certification version: v7.0[0m
+[0;32mI (523) wifi:config NVS flash: enabled[0m
+[0;32mI (524) wifi:config nano formatting: disabled[0m
+[0;32mI (528) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (533) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (537) wifi:Init management short buffer num: 32[0m
+[0;32mI (542) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (546) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (550) wifi:Init static rx buffer num: 10[0m
+[0;32mI (553) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (559) wifi_init: rx ba win: 6[0m
+[0;32mI (560) wifi_init: accept mbox: 6[0m
+[0;32mI (563) wifi_init: tcpip mbox: 32[0m
+[0;32mI (566) wifi_init: udp mbox: 6[0m
+[0;32mI (569) wifi_init: tcp mbox: 6[0m
+[0;32mI (572) wifi_init: tcp tx win: 5760[0m
+[0;32mI (575) wifi_init: tcp rx win: 5760[0m
+[0;32mI (578) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (585) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (589) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (674) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (692) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (693) wifi:enable tsf[0m
+[0;32mI (696) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (697) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (698) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (701) MAIN: ✅ Conductor ready![0m
+[0;32mI (704) MAIN: 🎼 Available songs:[0m
+[0;32mI (707) MAIN:    1. Twinkle Twinkle Little Star (4 parts, 120 BPM)[0m
+[0;32mI (713) MAIN:    2. Happy Birthday (3 parts, 100 BPM)[0m
+[0;32mI (718) MAIN:    4. Mary Had a Little Lamb (2 parts, 140 BPM)[0m
+[0;32mI (724) MAIN: 📝 Press BOOT button to cycle songs, hold to play![0m
+[0;32mI (730) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (735) main_task: Returned from app_main()[0m

@@ -1,0 +1,664 @@
+Command: C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Users\Petch\esp\v5.5.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\esp32_orchestra_conductor.elf C:\Users\Petch\OneDrive\Documents\VScode\Week-13-ESP32-Orchestra\ESP32_Orchestra_IDF\conductor\build\bootloader\bootloader.elf --force-color -m 'C:\Users\Petch\.espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Users\Petch\esp\v5.5.1\esp-idf\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  7 2025 10:17:58[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1a450h (107600) map[0m
+[0;32mI (125) esp_image: segment 1: paddr=0002a478 vaddr=3ffb0000 size=03f2ch ( 16172) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002e3ac vaddr=40080000 size=01c6ch (  7276) load[0m
+[0;32mI (134) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=84714h (542484) map[0m
+[0;32mI (321) esp_image: segment 4: paddr=000b473c vaddr=40081c6c size=16138h ( 90424) load[0m
+[0;32mI (357) esp_image: segment 5: paddr=000ca87c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (369) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (369) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (388) app_init: Project name:     esp32_orchestra_conductor[0m
+[0;32mI (393) app_init: App version:      4d38326[0m
+[0;32mI (397) app_init: Compile time:     Oct  7 2025 10:16:23[0m
+[0;32mI (402) app_init: ELF file SHA256:  4efcd1aba...[0m
+[0;32mI (407) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (410) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (414) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (418) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (422) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (428) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFB8070 len 00027F90 (159 KiB): DRAM[0m
+[0;32mI (439) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (450) heap_init: At 40097DA4 len 0000825C (32 KiB): IRAM[0m
+[0;33mW (456) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (468) spi_flash: detected chip: generic[0m
+[0;32mI (471) spi_flash: flash io: dio[0m
+[0;33mW (474) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (488) main_task: Started on CPU0[0m
+[0;32mI (491) main_task: Calling app_main()[0m
+[0;32mI (493) MAIN: 🎵 ESP32 Orchestra Conductor Starting...[0m
+[0;32mI (499) MAIN: ✅ GPIO setup complete[0m
+[0;32mI (514) wifi:wifi driver task: 3ffc0fa8, prio:23, stack:6656, core=0[0m
+[0;32mI (521) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (521) wifi:wifi certification version: v7.0[0m
+[0;32mI (522) wifi:config NVS flash: enabled[0m
+[0;32mI (523) wifi:config nano formatting: disabled[0m
+[0;32mI (528) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (533) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (537) wifi:Init management short buffer num: 32[0m
+[0;32mI (541) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (545) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (549) wifi:Init static rx buffer num: 10[0m
+[0;32mI (553) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (558) wifi_init: rx ba win: 6[0m
+[0;32mI (560) wifi_init: accept mbox: 6[0m
+[0;32mI (563) wifi_init: tcpip mbox: 32[0m
+[0;32mI (566) wifi_init: udp mbox: 6[0m
+[0;32mI (568) wifi_init: tcp mbox: 6[0m
+[0;32mI (571) wifi_init: tcp tx win: 5760[0m
+[0;32mI (574) wifi_init: tcp rx win: 5760[0m
+[0;32mI (578) wifi_init: tcp mss: 1440[0m
+[0;32mI (581) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (584) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (589) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (676) wifi:mode : sta (88:57:21:ae:44:84)[0m
+[0;32mI (677) wifi:enable tsf[0m
+[0;32mI (680) CONDUCTOR: MAC Address: 88:57:21:ae:44:84[0m
+[0;32mI (681) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (682) CONDUCTOR: ESP-NOW Conductor initialized successfully[0m
+[0;32mI (685) MAIN: ✅ Conductor ready![0m
+[0;32mI (689) MAIN: 🎼 Available songs (TOTAL_SONGS=4):[0m
+[0;32mI (693) MAIN:    [0] Twinkle Twinkle Little Star (id=1, parts=4, 120 BPM)[0m
+[0;32mI (700) MAIN:    [1] Happy Birthday (id=2, parts=3, 100 BPM)[0m
+[0;32mI (705) MAIN:    [2] Mary Had a Little Lamb (id=4, parts=2, 140 BPM)[0m
+[0;32mI (711) MAIN:    [3] Chang (เพลงช้าง) (id=5, parts=3, 120 BPM)[0m
+[0;32mI (718) MAIN: ➡️  Default selected: [0] Twinkle Twinkle Little Star[0m
+[0;32mI (724) MAIN: 📝 Short press BOOT: cycle songs | Long press: Play/Stop[0m
+[0;32mI (731) MAIN: 🚀 All tasks created, conductor is running![0m
+[0;32mI (736) main_task: Returned from app_main()[0m
+[0;32mI (4931) MAIN: 🎵 Selected: [1] Happy Birthday (id=2)[0m
+[0;32mI (5781) MAIN: 🎵 Selected: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (6481) MAIN: 🎵 Selected: [3] Chang (เพลงช้าง) (id=5)[0m
+[0;32mI (10461) CONDUCTOR: Conductor Status:[0m
+[0;32mI (10461) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (10461) CONDUCTOR:   Playing: No[0m
+[0;32mI (10461) CONDUCTOR:   Selected Song: 0[0m
+����������������������������������������������������������������(16381) CONDUCTOR: Starting song: Chang (เพลงช้าง)
+[0;32mI (16381) CONDUCTOR: Parts: 3, Tempo: 120 BPM[0m
+[0;32mI (16382) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (16383) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (16385) MAIN: ▶️  Playing: [3] Chang (เพลงช้าง) (id=5)[0m
+[0;32mI (16398) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (16403) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (16887) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (16889) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (17390) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (17391) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (17392) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (17885) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (17886) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (18387) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (18389) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (18390) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (18882) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (18883) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (19384) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (19385) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (19387) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (19889) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (19891) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (20382) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (20463) CONDUCTOR: Conductor Status:[0m
+[0;32mI (20463) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (20463) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (20463) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (20465) CONDUCTOR:   Current Song: Chang (เพลงช้าง)[0m
+[0;32mI (20472) CONDUCTOR:   Elapsed Time: 4 seconds[0m
+[0;32mI (20886) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (20887) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (21389) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (21390) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (21392) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (21884) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (21886) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (22386) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (22388) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (22389) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (22891) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (22893) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (23383) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (23884) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (23886) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (24386) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (24387) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (24388) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (24891) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (24892) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (25383) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (25384) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (25386) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (25888) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (25889) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (26390) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (26391) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (26393) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (26885) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (26886) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+����������������������������������������������������������������(27387) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms
+[0;32mI (27888) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (27890) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (28391) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (28392) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (28393) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (28886) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (28888) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (29389) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (29390) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (29391) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (29884) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (29886) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (30386) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (30387) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (30389) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (30391) CONDUCTOR: Part 2 finished[0m
+[0;32mI (30464) CONDUCTOR: Conductor Status:[0m
+[0;32mI (30464) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (30464) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (30464) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (30466) CONDUCTOR:   Current Song: Chang (เพลงช้าง)[0m
+[0;32mI (30472) CONDUCTOR:   Elapsed Time: 14 seconds[0m
+[0;32mI (30887) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (30889) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (31890) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (31891) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (32382) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (32383) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (32884) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (32886) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (33387) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (33388) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (33889) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (33890) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (34891) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (34893) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (35384) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (35385) CONDUCTOR: Part 0 finished[0m
+[0;32mI (35386) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (35387) CONDUCTOR: Part 1 finished[0m
+[0;32mI (35390) CONDUCTOR: Song finished![0m
+[0;32mI (35394) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (40469) CONDUCTOR: Conductor Status:[0m
+[0;32mI (40469) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (40469) CONDUCTOR:   Playing: No[0m
+[0;32mI (40469) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (42147) CONDUCTOR: Starting song: Chang (เพลงช้าง)[0m
+[0;32mI (42147) CONDUCTOR: Parts: 3, Tempo: 120 BPM[0m
+[0;32mI (42147) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (42151) MAIN: ▶️  Playing: [3] Chang (เพลงช้าง) (id=5)[0m
+[0;32mI (42151) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (42164) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (42169) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (42653) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (42655) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (43156) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (43157) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (43159) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (43651) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (43653) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (44154) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (44155) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (44157) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (44649) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (44650) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (45151) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (45152) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (45154) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (45656) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (45658) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (46149) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (46650) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (46652) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (47152) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (47154) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (47155) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (47657) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (47659) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (48150) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (48151) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (48153) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (48655) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (48657) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (49148) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (49649) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (49651) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (50151) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (50152) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (50153) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (50476) CONDUCTOR: Conductor Status:[0m
+[0;32mI (50476) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (50476) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (50476) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (50478) CONDUCTOR:   Current Song: Chang (เพลงช้าง)[0m
+[0;32mI (50485) CONDUCTOR:   Elapsed Time: 8 seconds[0m
+[0;32mI (50649) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (50651) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (51152) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (51153) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (51155) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (51657) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (51658) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (52149) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (52150) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (52152) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (52654) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (52656) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (53157) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (53648) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (53650) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (54150) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (54151) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (54152) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (54655) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (54657) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (55148) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (55149) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (55150) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (55653) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (55654) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (56155) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (56156) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (56158) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (56160) CONDUCTOR: Part 2 finished[0m
+[0;32mI (56653) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (56655) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (57656) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (57658) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (58148) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (58149) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (58650) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (58652) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (59153) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (59154) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (59655) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (59657) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (60478) CONDUCTOR: Conductor Status:[0m
+[0;32mI (60478) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (60478) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (60478) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (60480) CONDUCTOR:   Current Song: Chang (เพลงช้าง)[0m
+[0;32mI (60486) CONDUCTOR:   Elapsed Time: 18 seconds[0m
+[0;32mI (60651) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (60652) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (61153) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (61154) CONDUCTOR: Part 0 finished[0m
+[0;32mI (61155) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (61156) CONDUCTOR: Part 1 finished[0m
+[0;32mI (61159) CONDUCTOR: Song finished![0m
+[0;32mI (61163) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (68858) CONDUCTOR: Starting song: Chang (เพลงช้าง)[0m
+[0;32mI (68858) CONDUCTOR: Parts: 3, Tempo: 120 BPM[0m
+[0;32mI (68858) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (68859) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (68862) MAIN: ▶️  Playing: [3] Chang (เพลงช้าง) (id=5)[0m
+[0;32mI (68875) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (68880) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (69364) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (69365) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (69866) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (69868) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (69869) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (70361) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (70362) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (70483) CONDUCTOR: Conductor Status:[0m
+[0;32mI (70483) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (70483) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (70483) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (70485) CONDUCTOR:   Current Song: Chang (เพลงช้าง)[0m
+[0;32mI (70492) CONDUCTOR:   Elapsed Time: 1 seconds[0m
+[0;32mI (70866) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (70867) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (70869) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (71361) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (71362) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (71863) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (71864) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (71865) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (72368) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (72370) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (72861) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (73362) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (73363) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (73864) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (73866) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (73867) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (74359) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (74360) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (74861) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (74863) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (74864) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (75366) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (75367) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (75868) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (76359) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (76360) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (76861) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (76862) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (76864) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (77366) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (77367) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (77868) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (77870) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (77871) CONDUCTOR: Part 2: Note 53 (174.6 Hz) for 800 ms[0m
+[0;32mI (78363) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (78364) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (78865) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (78866) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (78867) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (79360) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (79361) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (79862) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (80363) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (80364) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (80484) CONDUCTOR: Conductor Status:[0m
+[0;32mI (80484) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (80484) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (80484) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (80486) CONDUCTOR:   Current Song: Chang (เพลงช้าง)[0m
+[0;32mI (80493) CONDUCTOR:   Elapsed Time: 11 seconds[0m
+[0;32mI (80867) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (80868) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (80870) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (81362) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (81363) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (81864) CONDUCTOR: Part 0: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (81865) CONDUCTOR: Part 1: Note 72 (523.3 Hz) for 400 ms[0m
+[0;32mI (81867) CONDUCTOR: Part 2: Note 55 (196.0 Hz) for 800 ms[0m
+[0;32mI (82359) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (82360) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 400 ms[0m
+[0;32mI (82861) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (82863) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (82864) CONDUCTOR: Part 2: Note 48 (130.8 Hz) for 800 ms[0m
+[0;32mI (82866) CONDUCTOR: Part 2 finished[0m
+[0;32mI (83360) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (83361) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (84361) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (84363) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (84864) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (84866) CONDUCTOR: Part 1: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (85367) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (85368) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (85859) CONDUCTOR: Part 0: Note 65 (349.2 Hz) for 400 ms[0m
+[0;32mI (85860) CONDUCTOR: Part 1: Note 69 (440.0 Hz) for 400 ms[0m
+[0;32mI (86361) CONDUCTOR: Part 0: Note 67 (392.0 Hz) for 800 ms[0m
+[0;32mI (86362) CONDUCTOR: Part 1: Note 71 (493.9 Hz) for 800 ms[0m
+[0;32mI (87363) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (87365) CONDUCTOR: Part 1: Note 67 (392.0 Hz) for 400 ms[0m
+[0;32mI (87866) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (87867) CONDUCTOR: Part 0 finished[0m
+[0;32mI (87868) CONDUCTOR: Part 1: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (87869) CONDUCTOR: Part 1 finished[0m
+[0;32mI (87873) CONDUCTOR: Song finished![0m
+[0;32mI (87876) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (90491) CONDUCTOR: Conductor Status:[0m
+[0;32mI (90491) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (90491) CONDUCTOR:   Playing: No[0m
+[0;32mI (90491) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (100493) CONDUCTOR: Conductor Status:[0m
+[0;32mI (100493) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (100493) CONDUCTOR:   Playing: No[0m
+[0;32mI (100493) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (110496) CONDUCTOR: Conductor Status:[0m
+[0;32mI (110496) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (110496) CONDUCTOR:   Playing: No[0m
+[0;32mI (110496) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (120499) CONDUCTOR: Conductor Status:[0m
+[0;32mI (120499) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (120499) CONDUCTOR:   Playing: No[0m
+[0;32mI (120499) CONDUCTOR:   Selected Song: 5[0m
+[0;32mI (126674) MAIN: 🎵 Selected: [0] Twinkle Twinkle Little Star (id=1)[0m
+[0;32mI (127474) MAIN: 🎵 Selected: [1] Happy Birthday (id=2)[0m
+[0;32mI (128324) MAIN: 🎵 Selected: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (130502) CONDUCTOR: Conductor Status:[0m
+[0;32mI (130502) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (130502) CONDUCTOR:   Playing: No[0m
+[0;32mI (130502) CONDUCTOR:   Selected Song: 5[0m
+����������������������������������������������������������������37474) CONDUCTOR: Starting song: Mary Had a Little Lamb
+[0;32mI (137474) CONDUCTOR: Parts: 2, Tempo: 140 BPM[0m
+[0;32mI (137474) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (137475) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (137477) MAIN: ▶️  Playing: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (137489) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (137984) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (137985) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (138476) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (138477) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (138978) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (138980) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (139481) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (139482) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (139982) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (139984) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (140475) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (140476) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (140507) CONDUCTOR: Conductor Status:[0m
+[0;32mI (140507) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (140507) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (140507) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (140510) CONDUCTOR:   Current Song: Mary Had a Little Lamb[0m
+[0;32mI (140515) CONDUCTOR:   Elapsed Time: 3 seconds[0m
+[0;32mI (141479) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (141480) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (141981) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (141983) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (142484) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (142485) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 800 ms[0m
+[0;32mI (143476) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (143478) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (143979) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (143981) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (144482) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (144483) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (145484) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (145485) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (145976) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (145978) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (146479) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (146480) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (146981) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (146983) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (147484) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (147485) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (147976) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (147978) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (148479) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (148481) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (148982) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (148984) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (149475) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (149476) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (149977) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (149979) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (150480) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (150481) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (150512) CONDUCTOR: Conductor Status:[0m
+[0;32mI (150512) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (150512) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (150512) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (150515) CONDUCTOR:   Current Song: Mary Had a Little Lamb[0m
+[0;32mI (150520) CONDUCTOR:   Elapsed Time: 13 seconds[0m
+[0;32mI (150984) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (150985) CONDUCTOR: Part 0 finished[0m
+[0;32mI (150986) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 800 ms[0m
+[0;32mI (150988) CONDUCTOR: Part 1 finished[0m
+[0;32mI (150991) CONDUCTOR: Song finished![0m
+[0;32mI (150995) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (158239) CONDUCTOR: Starting song: Mary Had a Little Lamb[0m
+[0;32mI (158239) CONDUCTOR: Parts: 2, Tempo: 140 BPM[0m
+[0;32mI (158239) CONDUCTOR: Song start message sent successfully[0m
+[0;32mI (158240) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (158242) MAIN: ▶️  Playing: [2] Mary Had a Little Lamb (id=4)[0m
+[0;32mI (158254) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (158749) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (158751) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (159242) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (159244) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (159744) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (159746) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (160247) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (160248) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (160519) CONDUCTOR: Conductor Status:[0m
+[0;32mI (160519) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (160519) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (160519) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (160522) CONDUCTOR:   Current Song: Mary Had a Little Lamb[0m
+[0;32mI (160527) CONDUCTOR:   Elapsed Time: 2 seconds[0m
+[0;32mI (160741) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (160742) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (161243) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (161244) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (162245) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (162247) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (162748) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (162750) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (163241) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 800 ms[0m
+[0;32mI (163243) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 800 ms[0m
+[0;32mI (164244) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (164246) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (164747) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (164748) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (165249) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 800 ms[0m
+[0;32mI (165250) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (166241) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (166242) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (166743) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (166745) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (167246) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (167247) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 400 ms[0m
+[0;32mI (167748) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (167750) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (168241) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (168242) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (168742) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (168744) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (169245) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (169246) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (169747) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (169748) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (170249) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (170251) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (170522) CONDUCTOR: Conductor Status:[0m
+[0;32mI (170522) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (170522) CONDUCTOR:   Playing: Yes[0m
+[0;32mI (170522) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (170525) CONDUCTOR:   Current Song: Mary Had a Little Lamb[0m
+[0;32mI (170530) CONDUCTOR:   Elapsed Time: 12 seconds[0m
+[0;32mI (170744) CONDUCTOR: Part 0: Note 64 (329.6 Hz) for 400 ms[0m
+[0;32mI (170745) CONDUCTOR: Part 1: Note 60 (261.6 Hz) for 400 ms[0m
+[0;32mI (171246) CONDUCTOR: Part 0: Note 62 (293.7 Hz) for 400 ms[0m
+[0;32mI (171247) CONDUCTOR: Part 1: Note 59 (246.9 Hz) for 400 ms[0m
+[0;32mI (171748) CONDUCTOR: Part 0: Note 60 (261.6 Hz) for 800 ms[0m
+[0;32mI (171749) CONDUCTOR: Part 0 finished[0m
+[0;32mI (171750) CONDUCTOR: Part 1: Note 57 (220.0 Hz) for 800 ms[0m
+[0;32mI (171752) CONDUCTOR: Part 1 finished[0m
+[0;32mI (171755) CONDUCTOR: Song finished![0m
+[0;32mI (171759) CONDUCTOR: Song stop message sent successfully[0m
+[0;32mI (180523) CONDUCTOR: Conductor Status:[0m
+[0;32mI (180523) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (180523) CONDUCTOR:   Playing: No[0m
+[0;32mI (180523) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (190526) CONDUCTOR: Conductor Status:[0m
+[0;32mI (190526) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (190526) CONDUCTOR:   Playing: No[0m
+[0;32mI (190526) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (200529) CONDUCTOR: Conductor Status:[0m
+[0;32mI (200529) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (200529) CONDUCTOR:   Playing: No[0m
+[0;32mI (200529) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (210532) CONDUCTOR: Conductor Status:[0m
+[0;32mI (210532) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (210532) CONDUCTOR:   Playing: No[0m
+[0;32mI (210532) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (220535) CONDUCTOR: Conductor Status:[0m
+[0;32mI (220535) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (220535) CONDUCTOR:   Playing: No[0m
+[0;32mI (220535) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (230538) CONDUCTOR: Conductor Status:[0m
+[0;32mI (230538) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (230538) CONDUCTOR:   Playing: No[0m
+[0;32mI (230538) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (240541) CONDUCTOR: Conductor Status:[0m
+[0;32mI (240541) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (240541) CONDUCTOR:   Playing: No[0m
+[0;32mI (240541) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (250544) CONDUCTOR: Conductor Status:[0m
+[0;32mI (250544) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (250544) CONDUCTOR:   Playing: No[0m
+[0;32mI (250544) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (260547) CONDUCTOR: Conductor Status:[0m
+[0;32mI (260547) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (260547) CONDUCTOR:   Playing: No[0m
+[0;32mI (260547) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (270550) CONDUCTOR: Conductor Status:[0m
+[0;32mI (270550) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (270550) CONDUCTOR:   Playing: No[0m
+[0;32mI (270550) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (280553) CONDUCTOR: Conductor Status:[0m
+[0;32mI (280553) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (280553) CONDUCTOR:   Playing: No[0m
+[0;32mI (280553) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (290556) CONDUCTOR: Conductor Status:[0m
+[0;32mI (290556) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (290556) CONDUCTOR:   Playing: No[0m
+[0;32mI (290556) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (300559) CONDUCTOR: Conductor Status:[0m
+[0;32mI (300559) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (300559) CONDUCTOR:   Playing: No[0m
+[0;32mI (300559) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (310562) CONDUCTOR: Conductor Status:[0m
+[0;32mI (310562) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (310562) CONDUCTOR:   Playing: No[0m
+[0;32mI (310562) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (320565) CONDUCTOR: Conductor Status:[0m
+[0;32mI (320565) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (320565) CONDUCTOR:   Playing: No[0m
+[0;32mI (320565) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (330568) CONDUCTOR: Conductor Status:[0m
+[0;32mI (330568) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (330568) CONDUCTOR:   Playing: No[0m
+[0;32mI (330568) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (340571) CONDUCTOR: Conductor Status:[0m
+[0;32mI (340571) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (340571) CONDUCTOR:   Playing: No[0m
+[0;32mI (340571) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (350574) CONDUCTOR: Conductor Status:[0m
+[0;32mI (350574) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (350574) CONDUCTOR:   Playing: No[0m
+[0;32mI (350574) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (360577) CONDUCTOR: Conductor Status:[0m
+[0;32mI (360577) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (360577) CONDUCTOR:   Playing: No[0m
+[0;32mI (360577) CONDUCTOR:   Selected Song: 4[0m
+[0;32mI (370580) CONDUCTOR: Conductor Status:[0m
+[0;32mI (370580) CONDUCTOR:   Initialized: Yes[0m
+[0;32mI (370580) CONDUCTOR:   Playing: No[0m
+[0;32mI (370580) CONDUCTOR:   Selected Song: 4[0m
